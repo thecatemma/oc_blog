@@ -1,0 +1,30 @@
+<?php
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+require_once('./functions.php');
+$articles = getArticles();
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Dernier Billet pour l'Alaska</title>
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1>Mon blog</h1>
+			<?php foreach($articles as $article): ?>
+			<?php /*  print_r($article); */ ?>
+				<h2><?= $article->title ?></h2>
+				<time><?= $article->date ?></time>
+				<a href="article.php?id=<?= $article->id ?>" class="btn btn-primary"> Lire la suite</a>
+			<br/><hr/><br/>
+			<?php endforeach; ?>
+		</div>
+	</body>
+</html>
