@@ -1,0 +1,7 @@
+AuthUserFile /Applications/MAMP/htdocs/oc_blog/admin/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Restricted Access"
+AuthType Basic
+<limit GET>
+require valid-user
+</Limit> 
