@@ -1,4 +1,6 @@
 <?php
+// Librairie de fonctions
+
 // FONCTION QUI RECUPERE TOUS LES ARTICLES
 function getArticles()
 {

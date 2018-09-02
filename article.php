@@ -1,4 +1,8 @@
 <?php
+
+// Controller servant pour afficher un article unique en fonction de son ID
+// Indiquer article.php?id=$id sinon redirige vers l'index.php
+
 if(!isset($_GET['id']) OR !is_numeric($_GET['id']))
 		header('Location: index.php');
 else
