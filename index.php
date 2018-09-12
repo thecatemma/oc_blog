@@ -6,17 +6,22 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 require_once('./functions.php');
 $articles = getArticles();
 
+include 'header.php';
 ?>
 
-<!DOCTYPE html>
-
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Dernier Billet pour l'Alaska</title>
-	</head>
 	
-	<body>
+	   <div id="slide-accueil">
+		<div id="cbp-fwslider" class="cbp-fwslider">
+		<ul>
+			<li><a href="#"><img src="images/img1.jpg" alt="img01"/></a></li>
+			<li><a href="#"><img src="images/img2.jpg" alt="img02"/></a></li>
+			<li><a href="#"><img src="images/img3.jpg" alt="img03"/></a></li>
+		</ul>
+		</div>
+	   </div>
+	
+<!-----FIN SLIDER----->
+		
 		<div class="container">
 			<h1>Mon blog</h1>
 			<?php foreach($articles as $article): ?>

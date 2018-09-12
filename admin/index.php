@@ -11,6 +11,7 @@ $articles = getArticles();
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Dernier Billet pour l'Alaska</title>
@@ -26,8 +27,10 @@ $articles = getArticles();
 			<?php /*  print_r($article); */ ?>
 				<h2><?= $article->title ?></h2>
 				<time><?= $article->date ?></time>
+
 				<a href="article.php?id=<?= $article->id ?>" class="btn btn-primary"> Lire la suite</a>
 			<br/><hr/><br/>
+			
 			<?php endforeach; ?>
 		</div>
 </body>

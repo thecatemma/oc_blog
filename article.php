@@ -40,6 +40,7 @@ else
 	$article = getArticle($id);
 	$comments = getComments($id);
 	
+	include 'header.php';
 }
 ?>
 
