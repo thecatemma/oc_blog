@@ -17,7 +17,7 @@ else
 		extract($_POST);
 		$errors = array();
 		
-		$author = strip_tags($author);
+		$author = strip_tags($author); //strip_tags essaie de renvoyer une chaîne avec tous les octets NULL
 		$comment = strip_tags($comment);
 		
 		if(empty($author))
