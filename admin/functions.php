@@ -47,3 +47,23 @@ function getComments($id)
 	return $data;
 	$req->closeCursor();
 }
+
+// FONCTION QUI MET A JOUR UN ARTICLE, CAD
+// UPDATE `articles` SET `content` = 'lorem ipsum dolor sit amet miou' WHERE `articles`.`id` = 4;
+
+function updateArticle($id,$valeur)
+{
+	require('./connect.php');
+	//$req = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
+	$req = $bdd->prepare('UPDATE `articles` SET `content` = '.$valeur.' WHERE `articles`.`id` = ?');
+	$req->execute(array($id));
+	if($req->rowCount() == 1)
+	{
+		$data = $req->fetch(PDO::FETCH_OBJ);
+		return $data;
+	}
+	else
+		header('Location: index.php');
+	$req->closeCursor();
+}
+
