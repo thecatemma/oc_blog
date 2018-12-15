@@ -40,7 +40,7 @@ else
 	$article = getArticle($id);
 	$comments = getComments($id);
 	
-	include 'header.php';
+	include 'header.php'; //include, tjrs avant html !
 }
 ?>
 
@@ -94,14 +94,13 @@ else
 				<button type="submit" class="btn btn-success">Envoyer</button>
 			</form>
 
-			<h2>Commentaires :</h2>
+			<h2>Liste des Commentaires :</h2>
 
 			<?php foreach($comments as $com): ?>
-				<h3><?= $com->author ?></h3>
-				<time><?= $com->date ?></time>
+				<h5><?= $com->author ?><time><?= $com->date ?></time></h5>
 				<p><?= $com->comment ?></p>
 			<?php endforeach; ?>
-			
+			  <a href="index.php">Retour aux articles</a>
 		</div>
 	</body>
 </html>
