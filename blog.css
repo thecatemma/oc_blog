@@ -24,7 +24,9 @@ body{
 	box-shadow: 0 3px 0 rosybrown;
 }
 
-
+.container {
+   text-align: center;
+}
 /*-------------NAVBAR------------*/
 
 ul{
@@ -45,10 +47,49 @@ ul li a{
     padding: 8px 8px 17px 8px;
 }
 
+/*------------- Carrousel -------------*/
+
+#carrousel{
+    position:relative;
+    height:350px;
+    width:1000px;
+    margin:auto;
+	background-color: bisque;
+}
+
+#carrousel ul {
+    list-style: none;
+}
+
+#carrousel ul li{
+    position:absolute;
+    margin:0 auto;
+}
+
+#carrousel ul li img  {
+    margin:0 auto;
+    height:350px;
+}
+
+.text_carrousel {
+	margin-top: -90px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+
+.controls {
+  	color: #fff;
+    display: block;
+    position: relative;
+}
+.next {
+	float: right;
+}
 
 /*-------------SLIDER PRESENTATION------------*/
 
-#slide-accueil                 {width:1020%px;margin-bottom: 30px;}
+#slide-accueil {width:1020%px;margin-bottom: 30px;}
 
 .cbp-fwslider {
 	position: relative;
@@ -139,5 +180,3 @@ ul li a{
 	background: purple;
 	transition: box-shadow 0.2s ease-in-out;
 }
-
-/*-------------FIN SLIDER PRESENTATION------------*/
