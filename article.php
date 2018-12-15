@@ -59,6 +59,7 @@ else
 		
 			<h1><?= $article->title ?></h1>
 			<time><?= $article->date ?></time>
+	<script src="./carroussel.js" defer></script>
 			<p><?= $article->content ?></p>
 			<hr />
 
