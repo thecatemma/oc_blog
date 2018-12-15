@@ -38,6 +38,7 @@ function addComment($articleId, $author, $comment)
 }
 
 // FONCTION QUI RECUPERE LES COMMENTAIRES D'UN ARTICLE
+//Sert à récupérer les commentaires d'un article dans la base de données
 function getComments($id)
 {
 	require('./connect.php');
@@ -47,3 +48,5 @@ function getComments($id)
 	return $data;
 	$req->closeCursor();
 }
+
+// Globalement toutes ces fonctions récupèrent des informations de la BDD, préparent requête, l'executent puis copient le résulat de la requête dans une variable que l'on renvoie
