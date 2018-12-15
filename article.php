@@ -53,13 +53,24 @@ else
 	</head>
 	
 	<body>
-	  <a href="index.php">Retour aux articles</a>
-		
+	
 	  <div class="container">
 		
 			<h1><?= $article->title ?></h1>
 			<time><?= $article->date ?></time>
+		 	
+<!-----SLIDER----->
 	<script src="./carroussel.js" defer></script>
+		<div id="carrousel">
+			<ul>
+				<li><img src="images/img1.jpg"/></li>
+				<li><img src="images/img2.jpg" /></li>
+				<li><img src="images/img3.jpg" /></li>
+			</ul>
+		  </div>
+<!-----FIN SLIDER----->
+		
+		
 			<p><?= $article->content ?></p>
 			<hr />
 
@@ -72,6 +83,8 @@ else
 				<?php endforeach; ?>
 
 			<?php endif; ?>
+		  
+		  <h2>Poster un commentaire :</h2>
 
 			<form action="article.php?id=<?= $article->id ?>" method="post">
 				<p> <label for="author">Pseudo :</label> <br />
