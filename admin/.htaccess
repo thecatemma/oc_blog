@@ -1,4 +1,4 @@
-AuthUserFile /Applications/MAMP/htdocs/Projet_4/admin/.htpasswd
+AuthUserFile /Applications/MAMP/htdocs/Projet_4_ok/admin/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Restricted Access"
 AuthType Basic
