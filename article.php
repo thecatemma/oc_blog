@@ -76,20 +76,21 @@ else
 		  <h2>Poster un commentaire :</h2>
 
 			<form action="article.php?id=<?= $article->id ?>" method="post">
-				<p> <label for="author">Pseudo :</label> <br />
-				<input type="text" name="author" id="auhor" value="<?php if(isset($author)) echo $author ?>"/> </p>
-				<p> <Label for="comment">Commentaire :</Label> <br />
+				<p> <label for="author" id="author">Pseudo</label> <br />
+				<input type="text" name="pseudo" id="pseudo" value="<?php if(isset($author)) echo $author ?>"/> </p>
+				<p> <Label for="comment" id="text_comment">Commentaire</Label> <br />
 				<textarea name="comment" id="comment" cols="30" rows="5"><?php if(isset($comment)) echo $comment ?></textarea> </p>
-				<button type="submit" class="btn btn-success">Envoyer</button>
+				<button type="submit" class="btn-success">Envoyer</button>
 			</form>
 
-			<h2>Liste des Commentaires :</h2>
+			<h2>Liste des Commentaires </h2>
 
 			<?php foreach($comments as $com): ?>
 				<h5><?= $com->author ?><time><?= $com->date ?></time></h5>
 				<p><?= $com->comment ?></p>
 			<?php endforeach; ?>
-			  <a href="index.php">Retour aux articles</a>
+			  
+		  <a href="index.php">Retour aux articles</a>
 		</div>
 	</body>
 </html>

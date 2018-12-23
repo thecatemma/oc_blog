@@ -29,8 +29,7 @@
 		
 				<div id="titre">
 				 <h1>Billet simple pour l'Alaska</h1>
-				  <p>le livre en ligne, par Jean Forteroche</p>
-				   
+				  <p>Le livre en ligne, par Jean Forteroche</p>
 				</div>	
 			
 
@@ -46,11 +45,10 @@
 			
 			<nav class="nav">
 				<ul class="navbar">
-				  <li><a href="./index.php">Home page</a>
-				  <li><a href="./article.php?id=1">Livre</a>
-				  <li><a href="ville.html">Biographie</a>
-				  <li><a href="liens.html">Liens</a>
-				  <li><a href="./admin">ADMINISTRATION</a>
+				  <li><a href="index.php">Home</a>
+				  <li><a href="article.php?id=1">Livre</a>
+				  <li><a href="biography.php">Biographie</a>
+				  <li><a href="admin">Auteur</a>
 				 </ul>
 			
 			</nav>

@@ -15,6 +15,7 @@ body{
 	position: relative;
 	z-index: 1;
 	color: white;
+	background-color: rgba(70, 70, 70, .3) ;
 }
 
 #buttoninfo{
@@ -55,7 +56,6 @@ ul li a{
     text-decoration: none;
 	padding-top: 10px;
     padding-bottom: 10px;
-	font-weight: bold;
 }
 
 /*------------- Carrousel -------------*/
@@ -67,7 +67,6 @@ ul li a{
     margin:auto;
 	top: -200px;
     z-index: 0;
-	background-color: bisque;
 }
 
 #carrousel ul {
@@ -99,6 +98,35 @@ ul li a{
 }
 .next {
 	float: right;
+}
+
+/*-------------ARTICLES / FORMULAIRE ------------*/
+
+#author {
+	color: rosybrown;
+}
+
+#pseudo {
+	border-color: lightblue;
+	padding: 10px;
+}
+
+#text_comment {
+	color: rosybrown;
+}
+
+#comment {
+	border-radius: 3px;
+	border-color: lightblue;
+}
+
+.btn-success {
+		border-color: rosybrown;
+		border-radius: 3px;
+		padding: 10px;
+		color: white;
+		background-color: lightblue;
+		font-size: 15px;
 }
 
 /*-------------SLIDER PRESENTATION------------*/
