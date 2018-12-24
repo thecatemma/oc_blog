@@ -8,6 +8,14 @@ body{
 	font-family: 'Roboto', serif;
 }
 
+h1 {
+	color: lightblue;
+}
+
+h2 {
+	color: darkslateblue;
+}
+
 /*-------------BLOC TEXTE------------*/
 
 #titre {
@@ -15,7 +23,11 @@ body{
 	position: relative;
 	z-index: 1;
 	color: white;
-	background-color: rgba(70, 70, 70, .3) ;
+	background-color: rgba(109, 7, 70, .3) ;
+}
+
+#titre , p {
+	margin-top: 10px;
 }
 
 #buttoninfo{
@@ -102,13 +114,19 @@ ul li a{
 
 /*-------------ARTICLES / FORMULAIRE ------------*/
 
+#post_comment {
+	color: rosybrown;
+}
+
 #author {
 	color: rosybrown;
 }
 
 #pseudo {
+	margin-top: 10px;
 	border-color: lightblue;
 	padding: 10px;
+	width: 200px;
 }
 
 #text_comment {
@@ -116,17 +134,19 @@ ul li a{
 }
 
 #comment {
+	margin-top: 10px;
 	border-radius: 3px;
 	border-color: lightblue;
+	width: 220px;
 }
 
 .btn-success {
-		border-color: rosybrown;
-		border-radius: 3px;
-		padding: 10px;
-		color: white;
-		background-color: lightblue;
-		font-size: 15px;
+	border-color: rosybrown;
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	background-color: lightblue;
+	font-size: 15px;
 }
 
 /*-------------SLIDER PRESENTATION------------*/

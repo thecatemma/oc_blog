@@ -73,7 +73,7 @@ else
 
 			<?php endif; ?>
 		  
-		  <h2>Poster un commentaire :</h2>
+		  <h2 id="post_comment">Poster un commentaire </h2>
 
 			<form action="article.php?id=<?= $article->id ?>" method="post">
 				<p> <label for="author" id="author">Pseudo</label> <br />

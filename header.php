@@ -27,10 +27,10 @@
 	<body>
 		<header>
 		
-				<div id="titre">
-				 <h1>Billet simple pour l'Alaska</h1>
-				  <p>Le livre en ligne, par Jean Forteroche</p>
-				</div>	
+			<div id="titre">
+			 <h1>Billet simple pour l'Alaska</h1>
+			  <p>Le livre en ligne, par Jean Forteroche</p>
+			</div>	
 			
 
 <!-----SLIDER----->
@@ -48,7 +48,7 @@
 				  <li><a href="index.php">Home</a>
 				  <li><a href="article.php?id=1">Livre</a>
 				  <li><a href="biography.php">Biographie</a>
-				  <li><a href="admin">Auteur</a>
+				  <li><a href="admin.php">Auteur</a>
 				 </ul>
 			
 			</nav>
