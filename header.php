@@ -29,7 +29,7 @@
 		
 			<div id="titre">
 			 <h1>Billet simple pour l'Alaska</h1>
-			  <p>Le livre en ligne, par Jean Forteroche</p>
+			  <h2 id="subtitle">Le livre en ligne, par Jean Forteroche</h2>
 			</div>	
 			
 

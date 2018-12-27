@@ -10,10 +10,17 @@ body{
 
 h1 {
 	color: lightblue;
+	font-weight: 600;
 }
 
 h2 {
 	color: darkslateblue;
+	font-weight: 400;
+}
+
+#subtitle {
+	color: white;
+	padding-bottom: 10px;
 }
 
 /*-------------BLOC TEXTE------------*/
@@ -47,16 +54,19 @@ h2 {
 
 .nav {
 	background-color: lightblue;
-	box-shadow: 0 3px 0 rosybrown;
+	box-shadow: 0 3px 0 darkblue;
 }
 
 .navbar {
-	text-align: center !important;}
+	text-align: center !important;
+
+}
 
 ul{
     display: table;
-    width: 100%;
-    margin: 0px;
+
+	width: 700px;
+    
 }
 ul li{
     display: table-cell;
