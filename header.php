@@ -43,15 +43,15 @@
 			</div>
 <!-----FIN SLIDER----->
 			
-			<nav class="nav">
-				<ul class="navbar">
+	
+				<ul id="nav">
 				  <li><a href="index.php">Home</a>
 				  <li><a href="article.php?id=1">Livre</a>
 				  <li><a href="biography.php">Biographie</a>
 				  <li><a href="admin.php">Auteur</a>
 				 </ul>
 			
-			</nav>
+		
 
 <!-- <?php echo $_SERVER['REQUEST_URI'] ; ?>-->
 			
