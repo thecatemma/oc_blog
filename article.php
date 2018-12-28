@@ -57,7 +57,7 @@ else
 	  <div class="container">
 		
 			<h1><?= $article->title ?></h1>
-			<time><?= $article->date ?></time>
+		  <p>Publié le</p> <time><?= $article->date ?></time>
 		 	
 		
 			<p><?= $article->content ?></p>
@@ -73,6 +73,10 @@ else
 
 			<?php endif; ?>
 		  
+		  
+		  <img class="img_article" src="images/img1.jpg">
+		  
+		
 		  <h2 id="post_comment">Poster un commentaire </h2>
 
 			<form action="article.php?id=<?= $article->id ?>" method="post">
