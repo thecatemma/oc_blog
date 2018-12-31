@@ -14,6 +14,8 @@ else
 	
 	if(!empty($_POST))
 	{
+		echo('ok');
+		print_r($_POST);
 		extract($_POST);
 		$errors = array();
 		
@@ -70,10 +72,12 @@ else
 		
 	  <div class="container">
 		
-			<h3><?= $article->title ?><time><?= $article->date ?></time><br/></h3>
+			
 			
 		  <!-- ajouter action au submit du formulaire pour stocketr les infos en bdd -->
-  <form method="post" action="article.php">
+		  <input type="text" name="title" value="<?= $article->title ?>">
+		  <time><?= $article->date ?></time>
+  <form method="post" action="article.php?update=1&id=<?= $article->id ?>">
     <textarea id="mytextarea"><?= $article->content ?></textarea>
 	  <input type="submit" value="Submit">
   </form>
