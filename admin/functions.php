@@ -1,5 +1,23 @@
 <?php
-// Librairie de fonctions
+
+// LIBRAIRIE DE FONCTIONS
+
+// FONCTION QUI CREE UN ARTICLE
+function createArticle($title, $content) //variables en php qui doivent être passées à la fonction pour être injectées dans le sql
+{
+	require('./connect.php');
+	//echo('INSERT INTO `articles` (`id`, `title`, `content`, `date`) VALUES (NULL, "'.$title.'", "'.$content.'", "2018-12-29 00:00:00");');
+	//Echo sert à afficher dans le navigateur ce qui est suivi de echo
+	
+	$req = $bdd->prepare('INSERT INTO `articles` (`id`, `title`, `content`, `date`) VALUES (NULL, "'.$title.'", "'.$content.'", "2018-12-29 00:00:00");');
+	
+	//'.$valeur.' WHERE `articles`.`id` = ?') 
+	
+//code SQL qui sert à créer un article, à dynamiser
+	$req->execute();
+	$req->closeCursor();
+}
+
 
 // FONCTION QUI RECUPERE TOUS LES ARTICLES
 function getArticles()
@@ -64,6 +82,15 @@ function updateArticle($id,$valeur)
 	}
 	else
 		header('Location: index.php');
+	$req->closeCursor();
+}
+
+
+function deleteArticle($id)
+{
+	require('./connect.php');
+	$req = $bdd->prepare('DELETE FROM `articles` WHERE `articles`.`id` = '.$id.' ');
+	$req->execute();
 	$req->closeCursor();
 }
 
