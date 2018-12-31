@@ -1,4 +1,11 @@
-<!DOCTYPE html> 
+<?php
+
+require_once('./functions.php');
+createArticle('Mon Petit Poney', 'Que j\'aime beaucoup');
+
+?>
+
+<!--<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
    <head> 
       <title>Billet simple pour l'Alaska</title> 
@@ -16,7 +23,7 @@
       <input type="submit" name="ok" value="Envoyer"> 
    </form> 
    <br /> 
-   <a href="blog.php" >VISITEZ LE BLOG</a> 
+   <a href="../index.php" >VISITEZ LE BLOG</a> 
 </body> 
-</html>
+</html>-->
 
