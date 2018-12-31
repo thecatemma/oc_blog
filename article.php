@@ -14,6 +14,7 @@ else
 	
 	if(!empty($_POST))
 	{
+		//print_r($_POST);
 		extract($_POST);
 		$errors = array();
 		
@@ -56,8 +57,8 @@ else
 	
 	  <div class="container">
 		
-			<h1><?= $article->title ?></h1>
-		  <p>Publié le</p> <time><?= $article->date ?></time>
+		<h1><?= $article->title ?></h1>
+		  <p>Publié le : <time><?= $article->date ?></time> </p>
 		 	
 		
 			<p><?= $article->content ?></p>
@@ -71,17 +72,15 @@ else
 			<p><?= $error ?></p>
 				<?php endforeach; ?>
 
-			<?php endif; ?>
-		  
+		<?php endif; ?>
 		  
 		  <img class="img_article" src="images/img1.jpg">
 		  
-		
-		  <h2 id="post_comment">Poster un commentaire </h2>
+		 <h2 id="post_comment">Poster un commentaire </h2>
 
 			<form action="article.php?id=<?= $article->id ?>" method="post">
 				<p> <label for="author" id="author">Pseudo</label> <br />
-				<input type="text" name="pseudo" id="pseudo" value="<?php if(isset($author)) echo $author ?>"/> </p>
+				<input type="text" name="author" id="author" value="<?php if(isset($author)) echo $author ?>"/> </p>
 				<p> <Label for="comment" id="text_comment">Commentaire</Label> <br />
 				<textarea name="comment" id="comment" cols="30" rows="5"><?php if(isset($comment)) echo $comment ?></textarea> </p>
 				<button type="submit" class="btn-success">Envoyer</button>
@@ -90,9 +89,11 @@ else
 			<h2>Liste des Commentaires </h2>
 
 			<?php foreach($comments as $com): ?>
-				<h5><?= $com->author ?><time><?= $com->date ?></time></h5>
-				<p><?= $com->comment ?></p>
-			<?php endforeach; ?>
+		  	<div class="comments">				
+		  		<h5><?= $com->author ?> <time><?= $com->date ?></time></h5>
+				<p>"<?= $com->comment ?>"<br/>--</p>
+			</div>
+		  <?php endforeach; ?>
 			  
 		  <a href="index.php">Retour aux articles</a>
 		</div>
