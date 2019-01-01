@@ -9,8 +9,9 @@
    <h2>Blog</h2> 
    <hr /> 
    <?php 
-   $connect = mysqli_connect("127.0.0.1", "root", "", "blogphp"); 
- 
+   //$connect = mysqli_connect("127.0.0.1", "root", "root", "blog"); 
+ $connect = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', 'root');
+	
    /* Vérification de la connexion */ 
    if (!$connect) { 
       echo "Échec de la connexion : ".mysqli_connect_error(); 
