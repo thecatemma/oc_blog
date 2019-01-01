@@ -24,7 +24,8 @@ $articles = getArticles();
 			<?php /*  print_r($article); */ ?>
 				<p><?= $article->title ?>
 					<a href="article.php?id=<?= $article->id ?>" class="btn btn-primary"> Editer l'article</a>
-					<a href="article.php?id=<?= $article->id ?>" class="btn btn-primary"> Supprimer l'article</a>
+					<a href="supprimerArticle.php?id=<?= $article->id ?>" class="btn btn-primary"> Supprimer l'article</a>
+<!-- le lien redirige vers le fichier "supprimerArticle.php" avec l'identifiant de l'article à supprimer passé en paramètre -->
 				</p>
 
 			<?php endforeach; ?>
