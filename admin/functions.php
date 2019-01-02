@@ -25,7 +25,7 @@ function getArticles()
 	require('./connect.php');
 	$req = $bdd->prepare('SELECT id, title FROM articles ORDER BY id DESC');
 	$req->execute();
-	$data = $req->fetchAll(PDO::FETCH_OBJ);
+	$data = $req->fetchAll(PDO::FETCH_OBJ);  //fetch en anglais signifie « va chercher »
 	return $data;
 	$req->closeCursor();
 }
