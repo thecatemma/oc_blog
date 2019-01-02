@@ -22,6 +22,8 @@ else
 		$author = strip_tags($author);
 		$comment = strip_tags($comment);
 		
+		// strip_tags - Supprime les balises HTML et PHP d'une chaîne
+		
 		if(empty($author))
 			array_push($errors, 'Entrez un pseudo');
 		
