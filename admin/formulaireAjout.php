@@ -1,29 +1,57 @@
 <?php
 
 require_once('./functions.php');
-createArticle('Mon Petit Poney', 'Que j\'aime beaucoup');
+
+if(isset($_POST['title'])) {
+	//print_r($_POST);
+	createArticle($_POST['title'], $_POST['content']);
+	
+	echo ('Larticle : '.$_POST['title'].' a été créé');
+
+}
+else {
+	echo 'Merci de renseigner les données pour article a créer <br/><br/>';
+}
 
 ?>
 
-<!--<!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
-   <head> 
-      <title>Billet simple pour l'Alaska</title> 
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-   </head> 
-<body> 
-   <h2>Nouvel article</h2> 
-   <form action="insertionArticle.php" method="POST" enctype="multipart/form-data"> 
-      <p>Titre de l'article: <input type="text" name="titre" /></p> 
-      <p>Commentaire: <br /><textarea name="commentaire" rows="10" cols="50"></textarea></p> 
-      <input type="hidden" name="MAX_FILE_SIZE" value="2097152"> 
-      <p>Choisissez une photo avec une taille inférieure à 2 Mo.</p> 
-      <input type="file" name="photo"> 
-      <br /><br /> 
-      <input type="submit" name="ok" value="Envoyer"> 
+<head>
+		<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <script>
+		  tinymce.init({
+			selector: '#mytextarea',
+			plugins: "paste",
+            //menubar: "edit",
+            toolbar: "paste"
+		  });
+		  </script>	   
+		<meta charset="utf-8" />
+		<title>Billet simple pour l'alaska Admin</title>
+	</head>
+	
+	<body>
+	  <a href="index.php">Retour aux articles</a>
+		
+	  <div class="container">
+		
+			
+<!-- ajouter action au submit du formulaire pour stocker les infos en bdd,
+quand on clique sur valider ça execute l'action -->
+		  
+  <form method="post" action="formulaireAjout.php"><!-- fait appel à ce même fichier-->
+	  	<p>TITRE<input type="text" name="title" value="">
+		<p>DATE <time></time></p>
+    	<textarea id="mytextarea" name="content"></textarea>	  
+	  
+	  	<input type="hidden" name="MAX_FILE_SIZE" value="2097152"> 
+      	<p>Choisissez une photo avec une taille inférieure à 2 Mo.</p> 
+      	<input type="file" name="photo"> 
+      	<br /><br /> 
+      	<input type="submit" name="ok" value="Envoyer"> 
    </form> 
-   <br /> 
+   
+		  <br /> 
    <a href="../index.php" >VISITEZ LE BLOG</a> 
 </body> 
-</html>-->
+</html>
 
