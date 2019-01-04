@@ -11,12 +11,13 @@ body{
 }
 
 h1 {
+	font-family: 'Pattaya', sans-serif;
 	color: lightblue;
 	font-weight: 600;
 }
 
 h2 {
-	color: darkslateblue;
+	color: lightblue;
 	font-weight: 400;
 }
 
@@ -62,6 +63,20 @@ p {
 .container {
    text-align: center;
 }
+
+.bloc {
+	display: block;
+    width: 33%;
+    float: left;
+    height: 250px;
+    border: 1px solid;
+}
+
+#image_bloc {
+	width: 100%;
+	padding-top: 0;
+}
+
 /*-------------NAVBAR------------*/
 
 #nav {
