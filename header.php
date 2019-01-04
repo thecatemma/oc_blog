@@ -10,8 +10,13 @@
 <!-------- CSS ------->		
 	<link rel="stylesheet" type="text/css" href="./blog.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/awesome-4.7.0/css/font-awesome.min.css">
+		
+<!-- Bootstrap  -->
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 		
 <!-------- Titre ------->		
 	<title>"Billet simple pour l'Alaska"</title>
@@ -21,7 +26,7 @@
 	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script> -->
 	<!-- <link rel="stylesheet" type="text/css" href="style/jquery.bxslider.css" /> -->
 	<!-- <script src="js/jquery.bxslider.min.js"></script><!-- Appel JS du carousel --> 
-		<script src="./carroussel.js" defer></script>
+	<script src="./carroussel.js" defer></script>
 	</head>
 	
 	<body>
