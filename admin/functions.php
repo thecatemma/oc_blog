@@ -38,7 +38,7 @@ function getArticle($id)
 	$req->execute(array($id));
 	if($req->rowCount() == 1)
 	{
-		$data = $req->fetch(PDO::FETCH_OBJ);
+		$data = $req->fetch(PDO::FETCH_OBJ); //flèche est de la poo = la méthode fetch de l'objet
 		return $data;
 	}
 	else
@@ -72,16 +72,18 @@ function getComments($id)
 function updateArticle($id,$valeur)
 {
 	require('./connect.php');
-	//$req = $bdd->prepare('SELECT * FROM articles WHERE id = ?');
-	$req = $bdd->prepare('UPDATE `articles` SET `content` = '.$valeur.' WHERE `articles`.`id` = ?');
+	$req = $bdd->prepare('UPDATE `articles` SET `content` = "'.$valeur.'" WHERE `articles`.`id` = ?');
+	//$req = $bdd->prepare('UPDATE `articles` SET `content` = "'.$valeur.'" WHERE `articles`.`id` = "'.$id.'"');
+	echo('UPDATE `articles` SET `content` = "'.$valeur.'" WHERE `articles`.`id` = "'.$id.'"');
 	$req->execute(array($id));
-	if($req->rowCount() == 1)
+	
+	if($req->rowCount() == 1) //returns the number of rows affected by the last DELETE
 	{
-		$data = $req->fetch(PDO::FETCH_OBJ);
+		$data = $req->fetch(PDO::FETCH_OBJ); //Récupère la ligne suivante d'une liste de valeurs de résultat
 		return $data;
 	}
-	else
-		header('Location: index.php');
+	/*else
+		header('Location: index.php');*/
 	$req->closeCursor();
 }
 
@@ -89,7 +91,7 @@ function updateArticle($id,$valeur)
 function deleteArticle($id)
 {
 	require('./connect.php');
-	$req = $bdd->prepare('DELETE FROM `articles` WHERE `articles`.`id` = '.$id.' ');
+	$req = $bdd->prepare('DELETE FROM `articles` WHERE `articles`.`id` = '.$id.'');
 	$req->execute();
 	$req->closeCursor();
 }
