@@ -75,25 +75,25 @@ else
 		
 			
 			
-		  <!-- ajouter action au submit du formulaire pour stocketr les infos en bdd -->
+<!-- ajouter action au submit du formulaire pour stocker les infos en bdd -->
 		  
-		  <form method="post" action="updateArticle.php?method=update&id=<?= $article->id ?>">
+	<form method="post" action="updateArticle.php?method=update&id=<?= $article->id ?>">
 		  	<input type="text" name="title" value="<?= $article->title ?>">
 		  	<time><?= $article->date ?></time>
 		  
 			<textarea id="mytextarea" name="content"><?= $article->content ?></textarea>
-			  <input type="submit" value="Submit">
-		  </form>
+			  <input type="submit" value="Submit">	  
+	</form>
 		  
-		  <!-- https://www.tiny.cloud/docs/quick-start/ -->
-			<hr />
+<!-- https://www.tiny.cloud/docs/quick-start/ -->
+			<hr /> <!-- barre horizontale -->
 
 			<?php
 
 			if(!empty($errors)):?>
 
-				<?php foreach($errors as $erros): ?>
-			<p><?= $error ?></p>
+				<?php foreach($errors as $errors): ?> <!-- pour chacune des erreurs avec un s as error sans s: faire ce qui suit-->
+			<p><?= $error ?></p> <!-- affiche valeur comme ouvir un chevron php echo la variable  -->
 				<?php endforeach; ?>
 
 			<?php endif; ?>
