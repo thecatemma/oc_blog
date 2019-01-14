@@ -18,14 +18,10 @@ if($_GET['method'] == 'delete'){
 	echo('article '.$id.' supprimé');
 
 }
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
-
-	
 <body>
 	<header>
 	</header>
